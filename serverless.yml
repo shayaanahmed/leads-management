@@ -1,0 +1,30 @@
+org: shayanahmed
+app: aws-node-typescript
+service: serverless-http-api-mongodb
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  environment:
+    DB_CONNECTION_STRING: mongodb://0.0.0.0:27017/db_lm?replicaSet=rs
+  httpApi:
+    cors: true
+
+functions:
+  createUser:
+    handler: handler.createLead
+    events:
+      - httpApi:
+          path: /user
+          method: post
+
+  user:
+    handler: handler.user
+    events:
+      - httpApi:
+          path: /user
+          method: get
+
+plugins:
+  - serverless-offline

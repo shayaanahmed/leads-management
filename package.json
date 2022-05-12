@@ -1,0 +1,21 @@
+{
+  "name": "leads-manager",
+  "version": "1.0.0",
+  "description": "Serverless HTTP API with MongoDB using Mongoose and Bluebird",
+  "main": "handler.js",
+  "scripts": {
+    "dev": "sls offline"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "mongoose": "^6.3.1",
+    "mongoose-auto-increment": "^5.0.1",
+    "validator": "^7.0.0"
+  },
+  "author": "Shayan Ahmed <shayan.ahmed.online@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "serverless-offline": "8.3.1",
+    "serverless-plugin-bespoken": "^0.1.3"
+  }
+}
